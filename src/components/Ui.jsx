@@ -45,7 +45,7 @@ export default function Ui({ name, title, status, image, bio, bgImg }) {
               className="w-full h-full object-cover"
             />
             <div
-              className={`absolute bottom-[11.5px] right-2 w-5 h-5 rounded-full border-2 z-20 ${
+              className={`absolute bottom-[11.5px] right-2 w-5 h-5 rounded-full border-2 duration-300 z-20 ${
                 status ? "bg-green-500" : "bg-red-600"
               } ${mode ? "border-slate-900" : "border-white"}`}
             ></div>

@@ -71,7 +71,12 @@ export default function Ui({ name, title, status, image, bio, bgImg }) {
             </button>
           </span>
 
-          <marquee behavior="scroll" direction="left" scrollamount="10">
+          <marquee
+            className="border-x-[1px]"
+            behavior="scroll"
+            direction="left"
+            scrollamount="10"
+          >
             <span>{mode ? "🕊️" : "🦅"}</span>
           </marquee>
           <div className="px-5 py-2 gap-5 w-full h-[30px] flex text-2xl">

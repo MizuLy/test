@@ -26,12 +26,12 @@ export default function App() {
           />
         ))} */}
         <Ui
-          name="Karina"
+          name="Mizu"
           title="Copy paste Developer"
-          image="zamn.jpg"
+          image="nagumo.jpg"
           bgImg="Samurai.jpg"
           bio="I talk to ChatGPT more than I do with my family"
-          status={0}
+          status={1}
         />
       </div>
     </div>

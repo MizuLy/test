@@ -8,6 +8,7 @@ import {
 } from "react-icons/di";
 import { SiVuedotjs } from "react-icons/si";
 import { useState } from "react";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 export default function Ui({ name, title, status, image, bio, bgImg }) {
   const [mode, setMode] = useState(true);
@@ -18,7 +19,7 @@ export default function Ui({ name, title, status, image, bio, bgImg }) {
       }`}
     >
       <div
-        className={`w-[300px] h-[330px] rounded-2xl overflow-hidden shadow-2xl  duration-300 ${
+        className={`w-[300px] h-[340px] rounded-2xl overflow-hidden shadow-2xl duration-300 ${
           mode
             ? "bg-slate-900 text-white shadow-2xl shadow-white"
             : "bg-white text-slate-900 shadow-2xl"
@@ -44,7 +45,7 @@ export default function Ui({ name, title, status, image, bio, bgImg }) {
               className="w-full h-full object-cover"
             />
             <div
-              className={`absolute bottom-3 right-1 w-5 h-5 rounded-full border-2 z-20 ${
+              className={`absolute bottom-[11.5px] right-2 w-5 h-5 rounded-full border-2 z-20 ${
                 status ? "bg-green-500" : "bg-red-600"
               } ${mode ? "border-slate-900" : "border-white"}`}
             ></div>
@@ -52,9 +53,21 @@ export default function Ui({ name, title, status, image, bio, bgImg }) {
         </div>
 
         <div className="flex flex-col justify-center w-full text-center mt-[50px] px-5">
-          <h1 className="text-3xl font-bold">{name}</h1>
+          <div className="flex m-auto relative">
+            <h1 className="text-3xl font-bold">{name}</h1>
+            <img
+              src="/Mizu.png"
+              alt="icon"
+              className="w-5 h-5 absolute top-[8px] left-[70px]"
+            />
+          </div>
           <span>
-            <button onClick={() => setMode(!mode)}>{mode ? "☀️" : "🌙"}</button>
+            <button
+              className="animate-pulse pt-2 text-2xl"
+              onClick={() => setMode(!mode)}
+            >
+              {mode ? <MdLightMode /> : <MdDarkMode />}
+            </button>
           </span>
           <h1 className="text-gray-500">{title}</h1>
           <div className="px-5 py-2 gap-5 w-full h-[30px] flex text-2xl">
@@ -70,7 +83,7 @@ export default function Ui({ name, title, status, image, bio, bgImg }) {
             <DiReact className="text-blue-500" />
             <SiVuedotjs className="text-green-500" />
           </div>
-          <h1 className="text-start py-2">{bio}</h1>
+          <h1 className="text-start my-2">{bio}</h1>
         </div>
       </div>
     </div>

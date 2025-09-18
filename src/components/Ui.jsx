@@ -19,7 +19,7 @@ export default function Ui({ name, title, status, image, bio, bgImg }) {
       }`}
     >
       <div
-        className={`w-[300px] h-[340px] rounded-2xl overflow-hidden shadow-2xl duration-300 ${
+        className={`w-[300px] h-[370px] rounded-2xl overflow-hidden shadow-2xl duration-300 ${
           mode
             ? "bg-slate-900 text-white shadow-2xl shadow-white"
             : "bg-white text-slate-900 shadow-2xl"
@@ -61,6 +61,7 @@ export default function Ui({ name, title, status, image, bio, bgImg }) {
               className="w-5 h-5 absolute top-[8px] left-[70px]"
             />
           </div>
+          <h1 className="text-gray-500">{title}</h1>
           <span>
             <button
               className="animate-pulse pt-2 text-2xl"
@@ -69,7 +70,10 @@ export default function Ui({ name, title, status, image, bio, bgImg }) {
               {mode ? <MdLightMode /> : <MdDarkMode />}
             </button>
           </span>
-          <h1 className="text-gray-500">{title}</h1>
+
+          <marquee behavior="scroll" direction="left" scrollamount="10">
+            <span>{mode ? "🕊️" : "🦅"}</span>
+          </marquee>
           <div className="px-5 py-2 gap-5 w-full h-[30px] flex text-2xl">
             <DiHtml5 className="text-orange-500" />
             <DiCss3 className="text-blue-500" />

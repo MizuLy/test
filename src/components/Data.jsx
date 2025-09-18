@@ -5,6 +5,7 @@ export default function Data() {
     { name: "Kyoko", gender: "Female", age: "25", pet: "cat" },
     { name: "Mizu", gender: "Male", age: "20", pet: "dog" },
   ];
+
   return (
     <>
       {/* {user.map((item, index) => (
@@ -17,9 +18,10 @@ export default function Data() {
         <table className="w-full">
           <tr className="text-3xl border-2 p-5 text-center ">
             <th>NAME</th>
-            <th>GENDER</th>
+            <th>TITLE</th>
             <th>AGE</th>
             <th>PET</th>
+            <th>BIO</th>
           </tr>
           {user.map((item, index) => (
             <tr className="text-3xl border-2 p-5 text-center ">
@@ -34,6 +36,9 @@ export default function Data() {
               </td>
               <td className="border-x-2 hover:bg-gradient-to-br from-blue-500 to-amber-500 ">
                 {item.pet}
+              </td>
+              <td className="border-x-2 hover:bg-gradient-to-br from-blue-500 to-amber-500 ">
+                {item.bio}
               </td>
             </tr>
           ))}
